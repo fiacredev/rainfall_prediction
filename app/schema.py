@@ -7,3 +7,6 @@ class WeatherData(BaseModel):
     DewPointHighF: float
     DewPointAvgF: float
     DewPointLowF: float
+    HumidityHighPercent: float
+    HumidityAvgPercent: float
+    HumidityLowPercent: float
