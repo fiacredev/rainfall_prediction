@@ -10,3 +10,6 @@ class WeatherData(BaseModel):
     HumidityHighPercent: float
     HumidityAvgPercent: float
     HumidityLowPercent: float
+    SeaLevelPressureHighInches: float
+    SeaLevelPressureAvgInches: float
+    SeaLevelPressureLowInches: float
