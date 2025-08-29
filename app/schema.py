@@ -13,3 +13,6 @@ class WeatherData(BaseModel):
     SeaLevelPressureHighInches: float
     SeaLevelPressureAvgInches: float
     SeaLevelPressureLowInches: float
+    VisibilityHighMiles: float
+    VisibilityAvgMiles: float
+    VisibilityLowMiles: float
