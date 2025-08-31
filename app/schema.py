@@ -16,3 +16,7 @@ class WeatherData(BaseModel):
     VisibilityHighMiles: float
     VisibilityAvgMiles: float
     VisibilityLowMiles: float
+    WindHighMPH: float
+    WindAvgMPH: float
+    WindGustMPH: float
+    Month: int
