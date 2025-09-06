@@ -7,3 +7,6 @@ MODEL_PATH = Path(__file__).parent.parent / "models" / "rainfall_pipeline.joblib
 
 # Load once when the application starts
 pipeline = joblib.load(MODEL_PATH)
+
+
+def predict(data: dict):
