@@ -10,3 +10,6 @@ pipeline = joblib.load(MODEL_PATH)
 
 
 def predict(data: dict):
+
+    df = pd.DataFrame([data])
+    prediction = pipeline.predict(df)[0]
