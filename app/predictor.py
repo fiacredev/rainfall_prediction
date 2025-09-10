@@ -13,3 +13,5 @@ def predict(data: dict):
 
     df = pd.DataFrame([data])
     prediction = pipeline.predict(df)[0]
+
+    prediction = max(0, min(prediction, 5.2))
