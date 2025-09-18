@@ -7,3 +7,10 @@ app = FastAPI(
     version="1.0.0",
     description="Predict rainfall using a trained Linear Regression model."
 )
+
+
+@app.get("/")
+def home():
+    return {
+        "message": "Rainfall Prediction API is running."
+    }
