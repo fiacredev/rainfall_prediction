@@ -14,3 +14,7 @@ def home():
     return {
         "message": "Rainfall Prediction API is running."
     }
+
+
+@app.post("/predict")
+def predict_rainfall(weather: WeatherData):
