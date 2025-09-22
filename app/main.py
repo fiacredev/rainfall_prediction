@@ -18,3 +18,5 @@ def home():
 
 @app.post("/predict")
 def predict_rainfall(weather: WeatherData):
+
+    prediction = predict(weather.model_dump())
