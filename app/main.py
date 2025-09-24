@@ -20,3 +20,7 @@ def home():
 def predict_rainfall(weather: WeatherData):
 
     prediction = predict(weather.model_dump())
+
+    return {
+        "predicted_precipitation_inches": prediction
+    }
