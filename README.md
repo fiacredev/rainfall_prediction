@@ -6,3 +6,12 @@
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 A clean, production-ready REST API that predicts **precipitation (in inches)** for a given day from weather measurements — powered by a scikit-learn machine learning pipeline and served with FastAPI.
+
+## ✨ Features
+
+- 🌡️ **19 weather features** — temperature, dew point, humidity, sea-level pressure, visibility, wind and month
+- 🤖 **Trained ML pipeline** — `StandardScaler` + `LinearRegression` serialized with Joblib
+- ⚡ **Fast & async-ready** — built on FastAPI and Uvicorn
+- ✅ **Validated inputs** — Pydantic v2 guarantees well-formed request payloads
+- 📖 **Interactive docs** — Swagger UI and ReDoc out of the box
+- 🎯 **Realistic output** — predictions clipped to the `0 – 5.2` inch range seen in training data
