@@ -15,3 +15,29 @@ A clean, production-ready REST API that predicts **precipitation (in inches)** f
 - ✅ **Validated inputs** — Pydantic v2 guarantees well-formed request payloads
 - 📖 **Interactive docs** — Swagger UI and ReDoc out of the box
 - 🎯 **Realistic output** — predictions clipped to the `0 – 5.2` inch range seen in training data
+
+## 🛠️ Tech Stack
+
+| Layer | Tool |
+| --- | --- |
+| Web framework | FastAPI |
+| Server | Uvicorn |
+| Validation | Pydantic v2 |
+| ML | scikit-learn, pandas, NumPy, Joblib |
+| Notebooks | Jupyter, matplotlib, seaborn |
+
+## 📂 Project Structure
+
+```
+RainfallPredictionAPI/
+├── app/
+│   ├── __init__.py
+│   ├── main.py                     # FastAPI app & routes
+│   ├── predictor.py                # Model loading & prediction logic
+│   └── schema.py                   # Pydantic request schema
+├── models/
+│   └── rainfall_pipeline.joblib    # Trained pipeline artifact
+├── rainfall.ipynb                  # EDA & model training notebook
+├── requirements.txt
+└── README.md
+```
