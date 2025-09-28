@@ -41,3 +41,20 @@ RainfallPredictionAPI/
 ├── requirements.txt
 └── README.md
 ```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.10 or newer
+- `pip`
+
+### Installation
+
+```bash
+git clone https://github.com/fiacredev/RainfallPredictionAPI.git
+cd RainfallPredictionAPI
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
