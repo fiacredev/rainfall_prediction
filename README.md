@@ -84,3 +84,21 @@ Once running, the interactive documentation is available at:
   "message": "Rainfall Prediction API is running."
 }
 ```
+
+### `POST /predict`
+
+Send the daily weather measurements — all 19 fields are required.
+
+```bash
+curl -X POST http://127.0.0.1:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "TempHighF": 85, "TempAvgF": 78, "TempLowF": 70,
+    "DewPointHighF": 70, "DewPointAvgF": 64, "DewPointLowF": 58,
+    "HumidityHighPercent": 85, "HumidityAvgPercent": 70, "HumidityLowPercent": 55,
+    "SeaLevelPressureHighInches": 30.10, "SeaLevelPressureAvgInches": 30.02, "SeaLevelPressureLowInches": 29.94,
+    "VisibilityHighMiles": 10, "VisibilityAvgMiles": 9, "VisibilityLowMiles": 7,
+    "WindHighMPH": 15, "WindAvgMPH": 8, "WindGustMPH": 22,
+    "Month": 5
+  }'
+```
