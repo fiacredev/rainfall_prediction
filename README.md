@@ -102,3 +102,13 @@ curl -X POST http://127.0.0.1:8000/predict \
     "Month": 5
   }'
 ```
+
+**Response**
+
+```json
+{
+  "predicted_precipitation_inches": 0.12
+}
+```
+
+> 💡 Predictions are clamped to the `[0, 5.2]` inch range observed in the training data, so the API never returns physically impossible values.
