@@ -112,3 +112,17 @@ curl -X POST http://127.0.0.1:8000/predict \
 ```
 
 > 💡 Predictions are clamped to the `[0, 5.2]` inch range observed in the training data, so the API never returns physically impossible values.
+
+## 🧠 How the Model Works
+
+1. **Data** — daily Austin weather history (`austin_weather.csv`).
+2. **Cleaning** — the notebook replaces `-` placeholders with `0` and casts columns to numeric.
+3. **Features** — 19 predictors: temperature, dew point, humidity, sea-level pressure, visibility, wind and month.
+4. **Training** — a `StandardScaler` + `LinearRegression` pipeline is trained and evaluated in `rainfall.ipynb`.
+5. **Deployment** — the fitted pipeline is exported to `models/rainfall_pipeline.joblib` and loaded once at API startup by `app/predictor.py`.
+
+To retrain or explore the analysis:
+
+```bash
+jupyter notebook rainfall.ipynb
+```
