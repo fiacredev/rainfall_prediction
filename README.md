@@ -126,3 +126,17 @@ To retrain or explore the analysis:
 ```bash
 jupyter notebook rainfall.ipynb
 ```
+
+## 👤 Author
+
+**Fiacre (fiacredev)**
+✉️ fiacredeveloper@gmail.com
+🐙 [github.com/fiacredev](https://github.com/fiacredev)
+
+---
+
+## 📄 License
+
+This project is available under the MIT License — feel free to use it, learn from it, and improve it.
+
+⭐ If you find this project useful, give it a star!
