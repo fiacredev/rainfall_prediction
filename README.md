@@ -1,22 +1,17 @@
 # 🌧️ Rainfall Prediction API
 
-![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.141-009688?style=flat-square&logo=fastapi&logoColor=white)
-![scikit--learn](https://img.shields.io/badge/scikit--learn-1.9.0-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
-
 A clean, production-ready REST API that predicts **precipitation (in inches)** for a given day from weather measurements — powered by a scikit-learn machine learning pipeline and served with FastAPI.
 
-## ✨ Features
+## Features
 
-- 🌡️ **19 weather features** — temperature, dew point, humidity, sea-level pressure, visibility, wind and month
-- 🤖 **Trained ML pipeline** — `StandardScaler` + `LinearRegression` serialized with Joblib
-- ⚡ **Fast & async-ready** — built on FastAPI and Uvicorn
-- ✅ **Validated inputs** — Pydantic v2 guarantees well-formed request payloads
-- 📖 **Interactive docs** — Swagger UI and ReDoc out of the box
-- 🎯 **Realistic output** — predictions clipped to the `0 – 5.2` inch range seen in training data
+-  **19 weather features** — temperature, dew point, humidity, sea-level pressure, visibility, wind and month
+-  **Trained ML pipeline** — `StandardScaler` + `LinearRegression` serialized with Joblib
+-  **Fast & async-ready** — built on FastAPI and Uvicorn
+-  **Validated inputs** — Pydantic v2 guarantees well-formed request payloads
+-  **Interactive docs** — Swagger UI and ReDoc out of the box
+-  **Realistic output** — predictions clipped to the `0 – 5.2` inch range seen in training data
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Tool |
 | --- | --- |
@@ -26,7 +21,7 @@ A clean, production-ready REST API that predicts **precipitation (in inches)** f
 | ML | scikit-learn, pandas, NumPy, Joblib |
 | Notebooks | Jupyter, matplotlib, seaborn |
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 RainfallPredictionAPI/
@@ -42,7 +37,7 @@ RainfallPredictionAPI/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -59,7 +54,7 @@ source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## ▶️ Running the API
+## ▶ Running the API
 
 ```bash
 uvicorn app.main:app --reload
@@ -70,7 +65,7 @@ Once running, the interactive documentation is available at:
 - **Swagger UI** → http://127.0.0.1:8000/docs
 - **ReDoc** → http://127.0.0.1:8000/redoc
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 | --- | --- | --- |
@@ -111,9 +106,9 @@ curl -X POST http://127.0.0.1:8000/predict \
 }
 ```
 
-> 💡 Predictions are clamped to the `[0, 5.2]` inch range observed in the training data, so the API never returns physically impossible values.
+>  Predictions are clamped to the `[0, 5.2]` inch range observed in the training data, so the API never returns physically impossible values.
 
-## 🧠 How the Model Works
+##  How the Model Works
 
 1. **Data** — daily Austin weather history (`austin_weather.csv`).
 2. **Cleaning** — the notebook replaces `-` placeholders with `0` and casts columns to numeric.
@@ -127,16 +122,10 @@ To retrain or explore the analysis:
 jupyter notebook rainfall.ipynb
 ```
 
-## 👤 Author
+## Author
 
 **Fiacre (fiacredev)**
 ✉️ fiacredeveloper@gmail.com
 🐙 [github.com/fiacredev](https://github.com/fiacredev)
 
 ---
-
-## 📄 License
-
-This project is available under the MIT License — feel free to use it, learn from it, and improve it.
-
-⭐ If you find this project useful, give it a star!
